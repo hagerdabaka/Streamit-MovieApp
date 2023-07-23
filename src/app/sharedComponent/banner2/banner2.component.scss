@@ -1,0 +1,168 @@
+
+$primary-color:#e50914;
+
+* {
+    line-height: 1.9em !important;
+    overflow: hidden;
+}
+
+.all{
+    padding-top: 20%;
+    height: 94vh;
+    // background-color: rgb(53, 52, 52) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container {
+      
+    padding: 4% 4% !important;
+    border-radius: 5px;
+    background: rgb(43,43,43);
+    background: linear-gradient(90deg, rgba(29, 29, 29, 0.801) 70%, rgba(255, 255, 255, 0) 80%);
+    .title {
+        background: url(https://wordpress.iqonic.design/product/wp/streamit/wp-content/themes/streamit-theme/assets/images/redux/texure.jpg);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 2.5em !important;
+        text-transform: uppercase !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 900;
+        
+    }
+    .t1 ul,
+    li {
+        list-style: none;
+        display: inline;
+
+        li {
+            display: inline;
+            margin-right: 7px;
+            .imgicon {
+                position: absolute;
+            }
+
+            .rate {
+                font-size: 20px;
+                
+            }
+        }
+    }
+
+    .icons {
+
+
+        a {
+            padding: 1.3% 1.3%;
+            border-radius: 50%;
+            color: $primary-color;
+            background-color: white !important;
+            border: 6px solid rgb(114, 114, 114);
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        i {
+            background-color: transparent;
+            color: $primary-color;
+        }
+    }
+  
+
+    .time {
+        .gp {
+            background-color: gray;
+            padding: 2px 2px;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+
+    .tags {
+        .tag
+        i {
+            color: $primary-color;
+        }
+    }
+
+}
+
+
+
+.logo img{
+    border-left: 7px solid #e50914;
+    padding: 10px 30px;
+    background: rgb(229,9,20) !important; 
+    background: linear-gradient(90deg, rgba(229, 9, 20, 0.507) 35%, rgba(196,196,196,0.10407913165266103) 100%) !important;
+  }
+
+.type{
+    color: $primary-color;
+
+}
+
+.inlinelist ,li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px !important;
+}
+
+.play-btn{
+    button{
+        background-color: $primary-color;
+        padding: 1% 3.5%;
+        margin-top: 5%;
+        font-size: 22px;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: #e509149c;
+        transition: all 0.7s  ease-in-out;
+          
+    }
+
+    
+}
+
+.film-image {
+    align-items: center;
+      img {
+          border-radius: 5%;
+          text-align: center;
+          margin-top: 5%;
+          width: 450px;
+          height: auto;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          
+      }
+  }
+
+  @media (max-width:900px) {
+    * {
+        line-height: 1.3em !important;
+    }
+    .all{
+        height: auto;
+        font-size: 70% !important;
+        font-weight: 80%;
+        width: 100%;
+        padding: 0 0;
+        margin: 0% 0%;
+
+    }
+  }
+
+  @media (max-width:600px) {
+    .container {
+   
+        border-radius: 5px;
+       background: rgba(43, 43, 43, 0.788);
+    //    background: rgba(255, 255, 255, 0) ;
+  }
+}

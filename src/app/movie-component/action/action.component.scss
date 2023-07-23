@@ -1,0 +1,46 @@
+
+
+// @media (max-width:600px)  and (min-width:200px){
+//   .card{
+//     width: 10rem;
+// 	  height: 18rem;
+//     font-size: 80%;
+
+//     img{
+//         width: 10rem;
+//         height: 12rem;
+//         border-radius: 15px;
+//     }
+//   }
+  
+// }
+.card{
+    width: 13rem;
+	  height: 22rem;
+    background-color: #3d3d3d;
+    box-shadow: 2px 5px 20px 7px rgba(0, 0, 0, 0.6);
+    color: gainsboro;
+    border-radius: 15px;
+
+    img{
+        width: 13rem;
+        height: 15rem;
+        border-radius: 15px;
+    }
+    
+  .card__button{
+	padding: 7px 10px;
+	border-radius: 50%;
+	border: none;
+	font-size:16px;
+	color: white;
+	background-color: #e50914;
+  }
+  .card__button:hover{
+	background-color: #e5091493;
+	transform: scale(105%);
+	transition:  0.5s ease-in-out ;
+	
+  }
+
+}

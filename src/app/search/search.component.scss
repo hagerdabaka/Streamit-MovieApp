@@ -1,0 +1,41 @@
+
+$primary-color:#e50914;
+button
+{
+    background-color: $primary-color;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+    padding: 3% 8%;
+    border-radius: 15px;
+}
+
+button:hover
+{
+    background-color: #e50914e8;
+    color: #ffffff;
+}
+
+img{
+    width: 100%;
+    cursor: pointer;
+}
+
+h5
+{
+    color: #ffffff;
+}
+input{
+    border-radius: 20px;
+    background-color: #000000b0;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #000000b6;
+    border-color: $primary-color !important; 
+    box-shadow: 0 0 0 0.1rem $primary-color !important; 
+    outline: 0; 
+    color: white;
+  }
+
+

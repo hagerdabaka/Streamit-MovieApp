@@ -1,0 +1,275 @@
+<app-banner2></app-banner2>
+
+<!-- Slider cards start   Trending Movies -->
+ <app-spinner *ngIf="isLoading"></app-spinner>
+
+<section>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="text-white  text-2xl slide-titlem-3 py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;">Trending Movies</div> <span class="text-end justify-end"
+        > <a routerLink="trend" style="color: #e50914 !important; text-decoration: none;">View All</a></span>
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of trendingMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+        <div class="container mt-3">
+          <div class="hero-container">
+            <div class="main-container">
+              <div class="poster-container">
+                <a [routerLink]="['/detail',slide.id]">
+                  <img src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}" class="rowimg largeposter"
+                    class="poster" /></a>
+              </div>
+              <div class="Card-container">
+                <div class="Cardcontent m-4 ">
+                  <h4 class="Cardmovie-title overflow-hidden">{{slide.original_title | slice:0:15}}</h4>
+                  <div class="row my-3">
+                    <div class="col-lg-6">
+
+                      <p class="Card-time text-gray-100"> 1hr : 44mins</p>
+                      <!-- <div><i class="fa-solid fa-star" style="color:#fdde30"></i> {{slide.vote_average | number: '1.1-0'}}   </div> -->
+                    </div>
+
+                    <div class="col-lg-6">
+                      <a class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>
+
+
+
+<!-- Slider2 cards  Action Movies -->
+
+
+<section>
+  <div class="container mx-3 overflow-hidden">
+    <div class="row">
+      <div class="text-white text-2xl slide-title  py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;">Action Movies</div> <span class="text-end justify-end"
+         > <a routerLink="action"  style="color: #e50914 !important; text-decoration: none;">View All</a></span>
+    </div>
+  </div>
+  
+  <owl-carousel-o [options]="customOptions2">
+    <ng-container *ngFor="let slide of actionMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+
+        <div class="container m-3">
+          <div class="cards2">
+
+            <div class="card">
+              <img class="card__background" src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+                height="2193" />
+              <div class="card__content | flow">
+                <div class=" card__content--container | flow ">
+                  <h2 class="card__title pb-3">{{slide.original_title }}</h2>
+                  <p class="card__description mt-4 ">
+                    <span> 1hr : 44mins &nbsp;&nbsp; </span> <a class="card__button "
+                      [routerLink]="['/detail',slide.id]">
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+
+</section>
+
+
+
+<!-- Slider2 cards  adventure Movie -->
+
+
+
+<section>
+  <div class="container m-3 overflow-hidden">
+    <div class="row">
+      <div class="text-white  text-2xl slide-title  py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;"> Adventure Movies</div> 
+      <span class="text-end justify-end" >
+        <a routerLink="adventure"  style="color: #e50914 !important; text-decoration: none;">View All</a>
+      </span>
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions2">
+    <ng-container *ngFor="let slide of adventureMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+
+        <div class="container m-3">
+          <div class="cards2">
+
+            <div class="card">
+              <img class="card__background" src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+                height="2193" />
+              <div class="card__content | flow">
+                <div class=" card__content--container | flow ">
+                  <h2 class="card__title pb-3">{{slide.original_title }}</h2>
+                  <p class="card__description mt-4 ">
+                    <span> 1hr : 44mins &nbsp;&nbsp; </span> <a class="card__button "
+                      [routerLink]="['/detail',slide.id]">
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+
+</section>
+
+
+
+<!-- Slider2 cards  comedy Movies -->
+
+
+<section>
+  <div class="container m-3 overflow-hidden">
+    <div class="row">
+      <div class="text-white text-2xl slide-title py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;">Comedy Movies</div>
+       <span class="text-end justify-end">
+        <a routerLink="comedy" style="color: #e50914 !important;text-decoration:none ;">View All</a>  
+      </span>
+    </div>
+  </div>
+  
+  <owl-carousel-o [options]="customOptions2">
+    <ng-container *ngFor="let slide of comedyMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+
+        <div class="container m-3">
+          <div class="cards2">
+
+            <div class="card">
+              <img class="card__background" src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+                height="2193" />
+              <div class="card__content | flow">
+                <div class=" card__content--container | flow ">
+                  <h2 class="card__title pb-3">{{slide.original_title }}</h2>
+                  <p class="card__description mt-4 ">
+                    <span> 1hr : 44mins &nbsp;&nbsp; </span> <a class="card__button "
+                      [routerLink]="['/detail',slide.id]">
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+
+</section>
+
+
+<!-- Slider2 cards documentary Movies -->
+
+
+
+<section>
+  <div class="container m-3 overflow-hidden">
+    <div class="row">
+      <div class="text-white  text-2xl slide-title py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;"> Documentary Movies</div> <span class="text-end justify-end"
+       >  <a routerLink="doc" style="color: #e50914 !important;text-decoration:none ;">View All</a>  </span>
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions2">
+    <ng-container *ngFor="let slide of  documentaryMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+
+        <div class="container m-3">
+          <div class="cards2">
+
+            <div class="card">
+              <img class="card__background" src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+                height="2193" />
+              <div class="card__content | flow">
+                <div class=" card__content--container | flow ">
+                  <h2 class="card__title pb-3">{{slide.original_title }}</h2>
+                  <p class="card__description mt-4 ">
+                    <span> 1hr : 44mins &nbsp;&nbsp; </span> <a class="card__button "
+                      [routerLink]="['/detail',slide.id]">
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+
+</section>
+
+
+<!-- Slider2 cards  thriller Movies -->
+
+
+<section>
+  <div class="container m-3 overflow-hidden">
+    <div class="row">
+      <div class="text-white text-2xl slide-title  py-3 " style="border-bottom: 5px solid #e50914; width: fit-content;">Thriller Movies</div> 
+      <span class="text-end justify-end">
+        <a routerLink="thriller"  style="color: #e50914 !important; text-decoration: none;">View All</a>
+        </span>
+    </div>
+  </div>
+  
+  <owl-carousel-o [options]="customOptions2">
+    <ng-container *ngFor="let slide of thrillerMovieResult">
+      <ng-template carouselSlide [id]="slide.id">
+
+        <div class="container m-3">
+          <div class="cards2">
+
+            <div class="card">
+              <img class="card__background" src="https://image.tmdb.org/t/p/original/{{ slide.poster_path }}"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+                height="2193" />
+              <div class="card__content | flow">
+                <div class=" card__content--container | flow ">
+                  <h2 class="card__title pb-3 text-base">{{slide.original_title }}</h2>
+                  <p class="card__description mt-4 ">
+                    <span> 1hr : 44mins &nbsp;&nbsp; </span> <a class="card__button "
+                      [routerLink]="['/detail',slide.id]">
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>

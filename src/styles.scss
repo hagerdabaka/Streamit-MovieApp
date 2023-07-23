@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$primary-color:#e50914;
+
+body{
+  background-color:#212529 !important;
+  color: #f8f8f8 !important;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 100%;
+ 
+}
+@media (max-width: 768px) {
+  /* remove the maximum width of the element */
+  .my-element {
+    max-width: none !important;
+  }
+}
+
+a{
+ color: white !important;
+}
+
+*{
+  margin: 0;
+  padding:0;
+
+
+}
+
+html , body{
+
+  width: 100%;
+  margin: 0;
+  padding:0;
+  overflow-x: hidden;
+}

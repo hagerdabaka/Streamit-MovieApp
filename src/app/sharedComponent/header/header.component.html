@@ -1,0 +1,48 @@
+   <header>
+    <div class="logo ">
+      <a class="navbar-brand" href="#">
+        <img src="https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2020/11/logo.png" alt="logo"
+        class="img-fluid" width="158px" height="39px">
+      </a>
+    </div>
+    <nav>
+      <ul class=" d-flex justify-center text-center ul-list">
+        <li><a href="#"><i class="fa-solid fa-house-chimney text-sm"></i> </a></li>
+        <li><a routerLink="/trend">Trending</a></li>
+        <li><a routerLink="/action">Action</a></li>
+        <li><a routerLink="/comdy">Comdy</a></li>
+        <li><a routerLink="/animate">Animation</a></li>
+        <li><a routerLink="/science">Sciencefiction</a></li>
+        <li><a routerLink="/advanture">Adventure</a></li>
+        <li><a routerLink="/thriller">Thriller</a></li>
+      </ul>
+    </nav>
+    <div class="d-flex justify-end ">
+      <a routerLink="/search" class=" end-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a  [routerLink]="['/signin']" class=" end-icons"> <i class="fa-solid fa-user"></i></a>
+     </div>
+  </header>
+
+  <div class="container text-red-500 text-sm slider mx-1">
+    <div class="row">
+      <div class="col-1 text-center text-xs">&lt;&lt;</div>
+    
+    <div class="col-9">
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-template carouselSlide class="item"><div><a routerLink="/trend">Trending</a></div></ng-template>
+      <ng-template carouselSlide  class="item"><div></div> </ng-template>    
+      <ng-template carouselSlide  class="item"><div class=""><a routerLink="/action">Action</a></div></ng-template>  
+      <ng-template carouselSlide  class="item"><div><a routerLink="/comdy">Comdy</a></div></ng-template>  
+      <ng-template carouselSlide  class="item"><div><a routerLink="/animate">Animation </a></div></ng-template> 
+      <ng-template carouselSlide  class="item"><div></div> </ng-template>   
+      <ng-template carouselSlide  class="item"><div><a routerLink="/advanture">Adventure</a></div></ng-template>   
+      <ng-template carouselSlide  class="item"> </ng-template>  
+      <ng-template carouselSlide  class="item"><div class=""><a routerLink="/thriller">Thriller &nbsp;</a></div></ng-template> 
+      <ng-template carouselSlide  class="item"><div><a routerLink="/science">Sciencefiction</a></div> </ng-template> 
+      <ng-template carouselSlide  class="item"> </ng-template>  
+    </owl-carousel-o>
+  </div>
+  <div class="col-2 text-xs text-center ">&gt;&gt;</div>
+   </div>
+   </div>
